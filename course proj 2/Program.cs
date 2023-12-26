@@ -1,14 +1,19 @@
-﻿using System;
+﻿using course_proj_2;
+using System;
 
 class Program
 {
     static void Main() {
-        Console.WriteLine("Enter name:");
-        string name = Console.ReadLine();
+        Console.WriteLine("Введите имя:");
+        string firstName = Console.ReadLine();
 
-        Console.WriteLine("Enter email:");
+        Console.WriteLine("Введите фамилию:");
+        string lastName = Console.ReadLine();
+
+        Console.WriteLine("Введите электронную почту:");
         string? email = Console.ReadLine();
 
-        Person person = new(name, email);
+
+        Person person = new(firstName, lastName, email);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace course_proj_2;
 
-internal class Adress
+public class Adress
 {
     public string Street { get; set; }
     public string City { get; set; }
