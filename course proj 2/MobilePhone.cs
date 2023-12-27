@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace course_proj_2;
 
-internal class MobileTelephone :Telephone
+internal class MobilePhone :TelephoneBase
 {
-    public MobileTelephone(string phoneNumber, TelephoneType phoneNumberType = TelephoneType.Mobile) : base(phoneNumber, phoneNumberType) 
+    public MobilePhone(string phoneNumber, TelephoneType phoneNumberType = TelephoneType.Mobile) : base(phoneNumber, phoneNumberType) 
     {
     }
     protected override bool Validate(string phoneNumber) 

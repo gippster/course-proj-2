@@ -9,6 +9,8 @@ namespace course_proj_2;
 public class Adress
 {
     public string Street { get; set; }
+    public string HouseNumber { get; set; }
+    public string ApartmentNumber { get; set; }
     public string City { get; set; }
     public string Country { get; set; }
     public string PostCode { get; set; }
