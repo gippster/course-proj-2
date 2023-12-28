@@ -28,11 +28,3 @@ public abstract class Telephone
         }
     }
 }
-public class TelephoneBase: Telephone
-{
-    public TelephoneBase(string phoneNumber, TelephoneType phoneNumberType = TelephoneType.Mobile) : base(phoneNumber, phoneNumberType) { }
-    protected override bool Validate(string telephone)
-    {
-        return !string.IsNullOrEmpty(telephone);
-    }
-}

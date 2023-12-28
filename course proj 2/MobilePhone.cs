@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace course_proj_2;
 
-internal class MobilePhone :TelephoneBase
+internal class MobilePhone : Telephone
 {
     public MobilePhone(string phoneNumber, TelephoneType phoneNumberType = TelephoneType.Mobile) : base(phoneNumber, phoneNumberType) 
     {
