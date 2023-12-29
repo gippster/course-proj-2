@@ -31,6 +31,7 @@ class Program
                                 new MenuItem("Изменить существующую запись", ChangePerson)
                             }),
                         new MenuItem("Удаление", RemovePerson),
+                        new MenuItem("Очистить ввод", () => Console.Clear()),
                         new MenuItem("Выход", () =>  Environment.Exit( 0 ))
                     });
 
@@ -67,11 +68,16 @@ class Program
         else
         {
             WriteLineWithColor($"По вашему запросу найдено совпадений: {findedPersons.Count()}", ConsoleColor.Green);
+            Console.Write("{0,40} |", "ID");
+            Console.WriteLine("{0,30} |{1,20}", $"Имя Фамилия", "Номера телефонов");
+            Console.WriteLine("---------------------------------------------------------------------------------------------------");
         }
-
-        foreach(var person in findedPersons)
+        foreach (var person in findedPersons)
         {
-            Console.WriteLine("{0,10} |{1,20}", $"{person.FirstName} {person.LastName}", string.Join(", ", person.Telephones.Select(telephone => telephone.PhoneNumber)));
+            Console.Write("{0,40} |", $"{person.ID}");
+            
+            Console.WriteLine("{0,30} |{1,20}", $"{person.FirstName} {person.LastName}", string.Join(", ", person.Telephones.Select(telephone => telephone.PhoneNumber)));
+            
         }
     }
 
