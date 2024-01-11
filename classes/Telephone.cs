@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace course_proj_2;
 
 public abstract class Telephone
 {
     public string PhoneNumber { get; protected set; }
     public TelephoneType PhoneNumberType { get; protected set; }
-    protected Telephone(string phoneNumber, TelephoneType phoneNumberType = TelephoneType.Mobile) 
+    protected Telephone(string phoneNumber, TelephoneType phoneNumberType) 
     {
         UpdatePhoneNumber(phoneNumber);
         PhoneNumberType = phoneNumberType;

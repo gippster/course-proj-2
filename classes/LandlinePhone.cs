@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace course_proj_2;
-
-internal class LandlinePhone : Telephone
+﻿internal class LandlinePhone : Telephone
 {
     public LandlinePhone(string phoneNumber, TelephoneType phoneNumberType = TelephoneType.Home) : base(phoneNumber, phoneNumberType)
     {
